@@ -9,6 +9,9 @@ vì nếu sử dụng margin thì cả hình tròn và doạn text sẽ cùng di
 .title {
     position: relative;
     padding-left: 2rem;
+    margin: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .title:before {
@@ -20,5 +23,20 @@ vì nếu sử dụng margin thì cả hình tròn và doạn text sẽ cùng di
     position: absolute;
     left: 0;
     top: 50%;
+    transform: translateY(-50%);
+}
+/* ---------------------------------------------------- */
+.line{
+    position: relative;
+    text-align: center;
+}
+.line:after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top:50%;
     transform: translateY(-50%);
 }
