@@ -149,13 +149,24 @@
  * - nếu array trống trả về 0
  */
  
- function sum(numbers) {
-    // Write code here...
-    var total = 0;
-    for(var num of numbers){
-        total += num;
-    }
-    return total;
- }
+//  function sum(numbers) {
+//     // Write code here...
+//     var total = 0;
+//     for(var num of numbers){
+//         total += num;
+//     }
+//     return total;
+//  }
 
- console.log(sum([1, 2, 3]))
+//  console.log(sum([1, 2, 3]))
+
+/*
+	Viết 1 chương trình xóa đi n phần tử cuối cùng của 1 array
+*/
+function removeEnd(arr, n) {
+    // your code here!
+    for(var i=0; i<n;i++){
+        arr.pop();
+    }
+    return arr;
+}

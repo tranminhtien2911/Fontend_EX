@@ -1,0 +1,94 @@
+;:root{
+    font-size: 62.5%;
+}
+.boxed{
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    /* animation-name: move ; */
+    /* Thời gian animation chạy */
+    /* animation-duration: 2s; */
+    /* animation-direction: alternate; */
+    /* animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-fill-mode: backwards; */
+
+    animation: move 2s forwards 1 alternate cubic-bezier(0.47, 0, 0.745, 0.715);
+    animation-delay: 3s;
+}
+
+@keyframes move{
+    /* form -> to : form chạy đến to trong khoảng 0 -> 100% */
+    form{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(20rem);
+    }
+}
+/* Tạo hiệu ứng zoom ra zoom vô  */
+.circle{
+    width: 6rem;
+    height: 6rem;
+    background-color: palevioletred;
+    border-radius: 5rem;
+    margin: 5rem auto;
+    /* animation: fade 1s forwards alternate infinite linear ; */
+    position: relative;
+
+}
+.circle:before{
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    border-radius: inherit;
+    animation: fade 1s forwards infinite linear ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fade {
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Tạo 2 vòng tròn xoay chuyển*/
+.circle2{
+    text-align: center;
+    margin: 5rem;
+    /* transform: rotate(180deg); */
+    animation: loading 1s infinite;
+}
+@keyframes loading{
+    50%{
+        transform: rotate(200deg);
+    }
+
+    75%{
+        transform: rotate(160deg);
+    }
+
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.circles__item{
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid violet;
+    display: inline-block;
+    border-radius: 3rem;
+    margin: 0 0.5rem;
+}
+.circles__item:first-child{
+    border-color: cyan;
+}
