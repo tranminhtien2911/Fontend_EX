@@ -47,4 +47,22 @@
  console.log(e.slice(1,4));
  console.log("-----------------------");
  
- //
+ //splice(): Là phương thức khá linh hoặ, có thể thêm hoặc xóa nhiều phần tử trong mảng.
+// Xóa phần tử - Cú pháp: splice(start, length)
+//start là chỉ số của phần tử bắt đầu để xóa
+//length là só phần tử muốn xóa
+console.log("Sử dụng chức năng xóa của phương thức Splice");
+var f = ["htc", "lg", "lenovo", "nokia", "samsung", "apple"];
+f.splice(2,5)
+console.log(f)
+console.log("-----------------------");
+//Nếu ta bỏ trống tham số "length" thì phương thức splice() sẽ xóa tất cả những phần tử bắt đầu từ phần tử có chỉ số là start cho đến hết mảng.
+console.log("Sử dụng chức năng xóa của phương thức Splice nhưng không có length");
+f.splice(1)
+console.log(f)
+console.log("-----------------------");
+//Thêm phần tử - Cú pháp; splice(start, 0, phân tử 1, phần tử 2, phần tử n,...)
+console.log("Sử dụng chức năng thêm của phương thức Splice");
+f.splice(1,0, 'blackberry', 'vertu')
+console.log(f)
+console.log("-----------------------");
