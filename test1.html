@@ -7,36 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="test1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 
 <body>
+    <!-- Làm bài tập flexBox: Dàn hình ảnh -->
+    <ul class="image_list">
+        <li class="image_item">
+            <img src="https://images.unsplash.com/photo-1646640727785-1b3350f70b39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                alt="" class="image">
+        </li>
+        <li class="image_item">
+            <img src="https://images.unsplash.com/photo-1623581453573-1213dbde8c87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+                alt="" class="image">
+        </li>
+        <li class="image_item">
+            <img src="https://images.unsplash.com/photo-1627196210531-41727fafaa45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="" class="image">
+        </li>
+        <li class="image_item">
+            <img src="https://images.unsplash.com/photo-1631304989062-dc79804289dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="" class="image">
+        </li>
+        <li class="image_item">
+            <img src="https://images.unsplash.com/photo-1626144367842-df8bd99bd6ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="" class="image">
+        </li>
+    </ul>
+    <!-- Làm 1 cái tam giác nho nhỏ hoi -->
+    <div class="boxed">
+        
+    </div>
+    <!-- Làm header cho một trang web tự nghĩ hehe -->
     <div class="navbar">
-        <div class="navbar-main">
-            <a class="navbar-brand">
-                Logo
-            </a>
+        <div class="navbar-brand">
+            <a href="#"><img src="./imge/Logo/LogoMusicEdit.png" alt="" class="navbar-logo"></a>
+        </div>
+        <div class="navbar-contain">
             <ul class="navbar-nav">
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">HOME</a>
+                    <a href="#" class="navbar-link">HOME</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">SẢN PHẨM</a>
+                    <a href="#" class="navbar-link">SẢN PHẨM</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">THƯƠNG HIỆU</a>
+                    <a href="#" class="navbar-link">THƯƠNG HIỆU</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">TIN TỨC</a>
+                    <a href="#" class="navbar-link">TIN TỨC</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">LIÊN HỆ</a>
+                    <a href="#" class="navbar-link">LIÊN HỆ</a>
                 </li>
             </ul>
+            <form class="navbar-find">
+                <input type="search" placeholder="Search" aria-label="Seach">
+                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
         </div>
-
     </div>
-
 </body>
 
 </html>
