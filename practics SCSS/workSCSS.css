@@ -1,0 +1,84 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.work {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.work-heading {
+  color: #1a0a3b;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+.work-heading:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #00c899;
+}
+.work-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-tab {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.work-tab-item {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border: 1px solid #00c899;
+  text-align: center;
+  border-radius: 2rem 0 2rem 2rem;
+  transition: all 0.2s ease;
+}
+.work-tab-item:hover {
+  color: white;
+  background-color: #00c899;
+}
+.work-tab-item:not(:first-child) {
+  margin-left: 1rem;
+}
+.work-all {
+  display: inline-block;
+  padding: 5px 1rem;
+  font-size: 14px;
+  border-radius: 1rem;
+  color: #00c899;
+  background-color: rgba(0, 200, 153, 0.25);
+  text-decoration: none;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.5rem;
+}
+.work-item {
+  width: calc(25% - 1.5rem);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 1.5rem;
+}
+.work-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/*# sourceMappingURL=workSCSS.css.map */

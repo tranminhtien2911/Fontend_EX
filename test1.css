@@ -1,88 +1,49 @@
 :root {
   font-size: 62.5%;
-  --spacing :3rem;
-}
-/* Làm bài tập flexBox: Dàn hình ảnh */
-.image_list{
- display: flex;
- justify-content: space-between;
- margin: 5rem 0 0 calc(-1 * var(--spacing)) ;
-}
-.image_item{
-    width: 25%;
-    margin-left: var(--spacing);
-    border-radius: 1rem;
-    overflow: hidden;
-}
-.image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/* Làm 1 cái tam giác nho nhỏ hoi */
-.boxed{
-    /* width: 5rem;
-    height: 5rem; */
-    display: inline-block;
-    
-    margin: 2rem auto;
-    /* background-color: black;
-    border-top: 10px yellow solid;
-    border-right: 10px blue solid;
-    border-bottom: 10px green solid;
-    border-left: 10px red solid; */
-     /* ---Trường hợp tam giác phía dưới */
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid yellow;
-
-    /* --- Tạo hình tam giác bên trái */
-    border-left: 100px solid yellow;
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid transparent;
 }
 
-
-/* Làm header cho 1 trang web tự nghĩ hehe */
 .navbar {
   width: 100%;
   height: 10rem;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    326deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(19, 185, 201, 1) 0%,
-    rgba(135, 136, 191, 1) 100%
-  );
+  background: black;
+  background: linear-gradient(326deg, black 0%, #1394db 0%, #8788bf 100%);
   display: flex;
   align-items: center;
-  margin-top: 5rem;
 }
-
+.navbar-first {
+  margin-left: 4rem;
+}
 .navbar-brand {
-}
-.navbar-logo {
   width: 10rem;
   height: 10rem;
 }
-.navbar-contain {
-    display:flex ;
-    align-items: center;
+.navbar-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 10rem;
 }
-.navbar-nav{
-    display: flex;
+.navbar-nav {
+  display: flex;
 }
 .navbar-item {
+  display: inline-block;
+}
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  margin-left: 3rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s linear;
+}
+.navbar-link:hover {
+  border-bottom: 1px solid white;
+}
+.navbar-end {
+  margin-left: auto;
 }
 
-.navbar-link {
-    display: inline-block;
-    padding: 4rem 1rem;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-}
-.navbar-find{
-    justify-self: flex-end;
-}
+/*# sourceMappingURL=test1.css.map */

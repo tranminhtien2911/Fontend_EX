@@ -1,0 +1,95 @@
+$primary-color: #42a7fe;
+
+@mixin dropdownSize($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.dropdown {
+    width: 40rem;
+    margin: 2rem auto 0;
+    position: relative;
+
+    &_select {
+        padding: 2rem 2.5rem 2rem 4rem;
+        background-color: $primary-color;
+        color: white;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &_text {
+        margin-left: 3.5rem;
+    }
+
+    &_caret {
+        margin-left: auto;
+    }
+
+    &_list {
+        width: 100%;
+        left: 0;
+        top: 100%;
+        position: absolute;
+        margin-top: 3rem;
+        border-radius: 4px;
+        box-shadow: 0 0 10px 0 rgba(black, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .0.25s linear;
+        background-color: white;
+        &:before {
+            content: "";
+            @include dropdownSize(2rem);
+            background-color: white;
+            border-radius: 3px;
+            //    border-left: 10px solid transparent;
+            //    border-right: 10px solid transparent;
+            //    border-bottom: 10px solid white;
+            position: absolute;
+            top: 0;
+            right: 2rem;
+            transform: translateY(-50%) rotate(45deg);
+            z-index: -1;
+        }
+        &:after{
+            content: "";
+            @include dropdownSize(100%, 3rem );
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+
+        }
+    }
+    &:hover{
+        .dropdown_list{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &_item {
+        padding: 2rem 2.5rem 2rem 4rem;
+        display: flex;
+        align-items: center;
+        color: #b3bbce;
+        transition: all .2s linear;
+        cursor: pointer;
+        border-left: 3px solid transparent;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        &:hover {
+            color: #74809a;
+            border-left-color: $primary-color;
+        }
+    }
+}

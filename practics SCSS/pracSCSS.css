@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: red;
+}
+
+.header-top {
+  color: red;
+}
+.header-top:hover {
+  color: orange;
+}
+.header-content {
+  font-size: 10rem;
+}
+
+.boxed {
+  width: 10rem;
+  height: 10rem;
+  background-color: orange;
+}
+
+/*# sourceMappingURL=pracSCSS.css.map */

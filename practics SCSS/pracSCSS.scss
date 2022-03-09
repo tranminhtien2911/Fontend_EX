@@ -1,0 +1,39 @@
+$primary-color:red ;
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    color: $primary-color;
+}
+// Lồng code với nhau
+.header{
+    // Sử dụng dấu & để nối từ
+    &-top{
+        color: red;
+        &:hover{
+            color: orange;
+        }
+    }
+    &-content{
+        font-size: 10rem;
+    }
+}
+//@mixin mixinName(){}
+//Nếu như tham số height không được truyền vào thì $height = $width (được thể hiện qua dấu :)
+@mixin size($width, $height: $width){
+    width: $width;
+    height: $height;
+}
+@mixin bg($color:black){
+    background-color: $color;
+}
+.boxed{
+    // width: 10rem;
+    // height: 10rem;
+    @include size(10rem );
+    @include bg(orange);
+}
