@@ -1,0 +1,146 @@
+html {
+    font-size: 62.5%;
+
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// Color
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+.author {
+    max-width: 100rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    height: 40rem;
+
+    &-image {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &-content {
+        padding: 3rem;
+        background-color: #eee;
+    }
+
+    &-name {
+        color: #333;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+
+    &-desc {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 3rem;
+    }
+
+    &-contact {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            margin-left: 1rem;
+        }
+    }
+}
+
+//--- POST --------------------------------------------------------------------\\
+@mixin flexBox($align: flex-start, $justify: flex-start, $flex-direction: row, $wrap: nowrap) {
+    display: flex;
+    align-self:$align;
+    justify-content: $justify;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+}
+.post {
+    @include flexBox(stretch);
+    padding: 2rem;
+    margin-left: -2rem;
+    &-item{
+        margin-left: 2rem;
+        width: calc((100%  / 3) - 2rem);
+    }
+    &-image{
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+        image-rendering: pixelated;
+    }
+    &-content{
+        padding: 2rem;
+        background-color: white;
+        border: 1px solid #eee;
+        height: calc(100% - 20rem);
+        @include flexBox(flex-start,flex-start,column);
+    }
+    &-title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    &-author{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5rem;
+        object-fit: cover;
+        margin-top: auto;
+    }
+
+}
+@media screen and(max-width: 1023px) {
+    .author {
+        max-width: 70rem;
+        height: 42rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .author {
+        &-image {
+            width: 35%;
+        }
+
+        &.content {
+            width: 65%;
+        }
+    }
+}
+
+@media screen and(max-width: 767px) {
+    .author {
+        padding: 0 2rem;
+        flex-direction: column;
+        height: auto;
+
+        &-image {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        &-content {
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+
+
+}

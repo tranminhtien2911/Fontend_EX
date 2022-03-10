@@ -46,6 +46,7 @@ body {
   text-align: center;
   border-radius: 2rem 0 2rem 2rem;
   transition: all 0.2s ease;
+  font-size: 16px;
 }
 .work-tab-item:hover {
   color: white;
@@ -79,6 +80,31 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+@media screen and (max-width: 1023px) {
+  .work-item {
+    width: calc(50% - 1.5rem);
+    margin-bottom: 1.5rem;
+  }
+  .work-list {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work-item {
+    width: 100%;
+  }
+  .work-filter {
+    flex-direction: column;
+  }
+  .work-tab {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .work-tab-item {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=workSCSS.css.map */
