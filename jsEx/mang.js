@@ -445,14 +445,53 @@
 }
 */
 
-function countOccurrences(arr) {
-    // viết code ở đây.
-    return arr.reduce(function(item1,item2){
-        console.log(item1, item2)
-        item1[item2] = item1[item2] +1 || 1 ;
-        return item1
+// function countOccurrences(arr) {
+//     // viết code ở đây.
+//     return arr.reduce(function(item1,item2){
+//         console.log(item1, item2)
+//         item1[item2] = item1[item2] +1 || 1 ;
+//         return item1
 
 
-    },{})
-  }
-  console.log(countOccurrences(['a', 'b', 'c', 'b', 'a']))
+//     },{})
+//   }
+//   console.log(countOccurrences(['a', 'b', 'c', 'b', 'a']))
+
+
+//----------------------//SORT//--------------------------//
+// Syntax: Array.sort(function(a, b){}) -> return a sorted array
+// if sort function
+//   return a value <0
+//     a will come before b 
+//   return a value >0
+//     a will come after b
+//   return 0
+
+/**
+ * Dữ liệu sinh viên Coders.Tokyo School là một array các object như sau
+ * Viết function trả về 1 array gồm 3 người có điểm cao nhất sắp xếp theo thứ tự điểm giảm dần. 
+ * Mục đích để hiển thị lên bảng Leaderboard
+ * Gợi ý: sử dụng sort và slice
+ */
+ 
+//  var students = [
+//   { name: 'A', score: 100 },
+//   { name: 'B', score: 10 },
+//   { name: 'C', score: 101 },
+//   { name: 'D', score: 50 },
+//   { name: 'E', score: 75 }
+// ];
+
+// function getTopStudents(students) {
+//   // Write code here...
+//   var sortScore =  students.sort(function(a,b){
+//     return b.score - a.score;
+//   })
+//   var sortName = sortScore.map(function(sort){
+//     return sort.name;
+//   })
+//   return sortName.slice(0,3);
+
+// }
+
+// console.log(getTopStudents(students))
