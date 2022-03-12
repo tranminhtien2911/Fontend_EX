@@ -121,7 +121,6 @@
 
     average là hàm tính điểm trung bình 3 môn. 
     average là thuộc tính dùng chung.
-
   Output: 
     student1.average() = 7
     student2.average() = 8

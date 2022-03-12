@@ -31,13 +31,15 @@ img {
   align-items: stretch;
   justify-content: space-between;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 .postNews-left, .postNews-right {
   width: calc(50% - 1rem);
 }
 .postNews-media {
-  height: 40rem;
+  height: 30rem;
   position: relative;
   margin-bottom: 3.5rem;
 }
@@ -126,6 +128,16 @@ img {
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+.postNews-title-small {
+  color: black;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+.postNews-link {
+  color: inherit;
 }
 .postNews-desc {
   font-size: 1.4rem;
@@ -139,9 +151,34 @@ img {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+.postNews-item:not(:last-child) {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
 .postNews-content {
   width: 100%;
   flex-grow: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .postNews-left, .postNews-right {
+    width: 100%;
+  }
+  .postNews-left {
+    margin-bottom: 2.5rem;
+  }
+  .postNews-image-small {
+    width: 10rem;
+    height: auto;
+  }
+  .postNews-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+  }
 }
 
 /*# sourceMappingURL=postNews.css.map */

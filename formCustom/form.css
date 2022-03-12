@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  background-color: #f3f3f3;
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.chatbox-input:checked + .chatbox-label {
+  color: orange;
+}
+.chatbox-label {
+  position: relative;
+  padding-left: 5rem;
+  cursor: pointer;
+}
+.chatbox-label:before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background-color: #FC556F;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 1rem;
+}
+.chatbox-label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 2rem;
+  height: 1rem;
+  transform: rotate(-45deg);
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  opacity: 0;
+  visibility: hidden;
+  transform: 0.25s;
+}
+
+/*# sourceMappingURL=form.css.map */

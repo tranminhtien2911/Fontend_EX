@@ -45,12 +45,20 @@ img {
     flex-wrap: $wrap;
 }
 
+@mixin maxWidth($value) {
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}
+
 .postNews {
     padding: 2rem;
     border-radius: 1rem;
     background-color: white;
 
-    @include flexBox(stretch,space-between);
+    @include flexBox(stretch, space-between, row, wrap);
+    max-width: 100rem;
+    margin: 0 auto;
 
     &-left,
     &-right {
@@ -58,7 +66,7 @@ img {
     }
 
     &-media {
-        height: 40rem;
+        height: 30rem;
         position: relative;
         margin-bottom: 3.5rem;
     }
@@ -68,8 +76,9 @@ img {
         object-fit: cover;
         object-position: center;
         border-radius: 1rem;
-        &-small{
-            @include size(15rem, 10rem );
+
+        &-small {
+            @include size(15rem, 10rem);
             margin-right: 1.5rem;
             flex-shrink: 0;
         }
@@ -119,6 +128,7 @@ img {
             margin-right: 2.5rem;
             padding-right: 2.5rem;
             position: relative;
+
             &:before {
                 content: "";
                 @include size(5px);
@@ -137,7 +147,7 @@ img {
         color: #999;
         font-size: 1.4rem;
 
-        
+
     }
 
     &-title {
@@ -145,6 +155,18 @@ img {
         font-weight: bold;
         font-size: 2rem;
         margin-bottom: 1.5rem;
+        line-height: 1.4;
+
+        &-small {
+            color: black;
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &-link {
+        color: inherit;
     }
 
     &-desc {
@@ -152,12 +174,45 @@ img {
         line-height: 1.6;
         color: #999;
     }
-    &-item{
+
+    &-item {
         @include flexBox(center);
+
+        &:not(:last-child) {
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
     }
-    &-content{
+
+    &-content {
         width: 100%;
         flex-grow: 1;
     }
+}
 
+@include maxWidth(767px) {
+    .postNews {
+        &-left,
+        &-right {
+            width: 100%;
+        }
+        &-left {
+            margin-bottom: 2.5rem;
+        }
+        &-image-small{
+            width: 10rem;
+            height: auto;
+        }
+        &-title{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+        }
+        %-small{
+            margin-bottom: 1rem;
+        }
+    }
 }
