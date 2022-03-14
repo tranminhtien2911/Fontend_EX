@@ -23,15 +23,19 @@ img {
   max-width: 100%;
 }
 
-.chatbox-input:checked + .chatbox-label {
-  color: orange;
+.checkbox-input {
+  display: none;
 }
-.chatbox-label {
+.checkbox-input:checked + .checkbox-label:after {
+  opacity: 1;
+  visibility: visible;
+}
+.checkbox-label {
   position: relative;
   padding-left: 5rem;
   cursor: pointer;
 }
-.chatbox-label:before {
+.checkbox-label:before {
   content: "";
   width: 4rem;
   height: 4rem;
@@ -42,7 +46,7 @@ img {
   transform: translateY(-50%);
   border-radius: 1rem;
 }
-.chatbox-label:after {
+.checkbox-label:after {
   content: "";
   position: absolute;
   top: 0;
@@ -52,9 +56,13 @@ img {
   transform: rotate(-45deg);
   border-left: 3px solid white;
   border-bottom: 3px solid white;
-  opacity: 0;
   visibility: hidden;
   transform: 0.25s;
+}
+
+.radio {
+  margin: 3rem;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=form.css.map */

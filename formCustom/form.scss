@@ -45,12 +45,13 @@ img {
     flex-wrap: $wrap;
 
 }
-
-.chatbox {
+// Make custome Checkbox
+.checkbox{
     &-input {
-        // display: none;
-        &:checked +.chatbox-label {
-            color: orange;
+        display: none;
+        &:checked +.checkbox-label:after {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
@@ -80,9 +81,18 @@ img {
             transform: rotate(-45deg);
             border-left: 3px solid white;
             border-bottom: 3px solid white;
-            opacity: 0;
+            // opacity: 0;
             visibility: hidden;
             transform: 0.25s;
         }
     }
 }
+
+// End make custome checkbox
+
+// Make custome radio
+.radio{
+    margin: 3rem;
+    display: inline-block;
+}
+// End make custome radio
