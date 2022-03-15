@@ -15,14 +15,14 @@ $bg-color-3: #fefce5;
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-family: "Poppins", sans-serif;
     font-weight: normal;
-    padding: 2rem;
+    padding: 5px;
     width: 21cm;
     height: 29.7cm;
     margin: auto;
-    border: 1px red solid;
+    // border: 1px red solid;
 }
 
 a {
@@ -38,6 +38,7 @@ img {
     width: $width;
     height: $height;
 }
+
 .header {
     display: grid;
     grid-template-columns: 30% 46% 24%;
@@ -70,6 +71,7 @@ img {
             margin-right: 5px;
         }
     }
+
     &-lab {
         text-align: center;
         border: 1px black solid;
@@ -94,91 +96,97 @@ img {
     }
 
 }
-.donor{
+
+.donor {
     width: 100%;
-    height: 14rem;
+    height: 12.5rem;
     border: 2px solid $boder-color-1;
     background-color: $bg-color-1;
     padding: 5px;
-    &-content{
+
+    &-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    &-title{
+
+    &-title {
         margin-bottom: 16px;
         font-weight: bold;
     }
-    &-item{
+
+    &-item {
         margin-bottom: 16px;
         font-weight: bold;
         font-size: 1.3rem;
-        &-sex{
-            margin: 0 1rem 0 1rem ;
+
+        &-sex {
+            margin: 0 1rem 0 1rem;
         }
-        &-choice{
+
+        &-choice {
             font-weight: normal;
             font-style: italic;
         }
     }
 }
-.request{
-    margin-top: 0.8rem;
-    &-title{
+
+.request {
+    margin-top: 5px;
+    &-title {
         font-weight: bold;
+        font-size: 1.3rem;
     }
-    &-content{
+    &-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 3px;
-        &-left{
-            font-size: 1.3rem;
+
+        &-left {
+            font-size: 1rem;
             padding: 5px;
             font-weight: bold;
         }
-        &-right{
-
-        }
     }
-    &-notes{
+    &-notes {
         font-size: 1.3rem;
         font-weight: bold;
         padding: 5px;
-        height: 4.7rem;
+        height: 4rem;
     }
-    &-tests{
+    &-tests {
         border-top: 2px solid $boder-color-1;
         padding: 5px;
         line-height: 1.4;
-        &-title{
+        &-title {
             font-size: 1.3rem;
             font-weight: bold;
         }
-        &-item{
+        &-item {
             font-size: 1rem;
             display: grid;
             grid-template-columns: 5% 95%;
-            margin-top: 0.5rem;
+            margin-top: 3px;
         }
-        &-square{
+
+        &-square {
             width: 1rem;
             height: 1rem;
             border: 1px black solid;
         }
-        // &-detail{
-        //     margin-left: 10px;
-        // }
     }
-    span{
+    span {
         font-weight: bold;
         font-style: italic;
     }
-    &-content-left, &-content-right{
+    &-content-left,
+    &-content-right {
         border: 2px solid $boder-color-1;
         background-color: $bg-color-1;
     }
 }
-.account{
-    margin-top: 0.8rem;
+
+.account {
+    margin-top: 5px;
     width: 100%;
     height: 38px;
     background-color: $bg-color-1;
@@ -189,68 +197,268 @@ img {
 }
 
 .collector{
-    margin-top: 0.8rem;
+    margin-top: 5px;
     &-title{
         font-weight: bold;
-    }
-    
-    &-photo{
-        width: 100%;
-        height: 7.5rem;
-        border: 2px solid $border-color-2;
-        background-color: $bg-color-2;
-        padding: 5px;
-        margin-bottom: 0.8rem;
-        &-content{
-            display: grid;
-            grid-template-columns: 3fr 1fr ;
-        }
-        &-left-top{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-top: 1px;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        &-left-bottom{
-            font-size: 1.3rem;
-        }
-        &-right{
-            font-size: 1.3rem;
-        }
-        &-title{
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-        &-item, &-item1, &-item2{
-            display: grid;
-        }
-        &-item{
-            grid-template-columns: 46% 54%;
-        }
-        &-item1{
-            grid-template-columns: 29% 71%;
-        }
-        &-item2{
-            grid-template-columns: 16% 84%;
-        }
-        &-underline{
-            border-bottom: 1px solid black;
-        }
-        &-square{
-            border: 1px solid black;
-            width: 1rem;
-            height: 1rem;
-        }
-
-    }
-    &-specimen{
-        width: 100%;
-        height: 13rem;
-        border: 2px solid $border-color-2;
-        background-color: $bg-color-2;
-        padding: 5px;
+        margin-bottom: 5px;
     }
 }
+.photo {
+    border: 2px solid $border-color-2;
+    background-color: $bg-color-2;
+    height: 80px;
+    width: 100%;
+    padding: 5px;
+    &-title{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &-content{
+        display: flex;
+        font-size: 1.2rem;
+    }
+    &-top{
+        display: flex;
+        margin-bottom: 1.7rem;
+    }
+    &-item{
+        display: flex;
+        margin-right: 30px;
+    }
+    &-square {
+        border: 1px solid black;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 5px;
+    }
+    &-underline {
+        border-bottom: 1px solid black;
+        width: 135px;
+        margin-left: 120px;
+        &-1,&-2{
+            border-bottom: 1px solid black;
+        }
+        &-1 {
+            width: 135px;
+            margin-left: 75px;
+        }
+        &-2{
+            width: 432px;
+            margin-left: 80px;
+        }
+    }
+}
+.specimen{
+    padding: 5px;
+    margin-top: 10px;
+    border: 2px solid $border-color-2;
+    background-color: $bg-color-2;
+    &-title{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &-content{
+        font-size: 1.2rem;
+    }
+    &-line{
+        display: flex;
+        margin-bottom: 5px;
+        &-1{
+            margin-bottom: 5px;
+        }
+    }
+    &-line-item{
+        display: flex;
+        &-1,&-2,&-3,&-5,&-6,&-7,&-8{
+            display: flex;
+        }
+        &-1,&-2{
+            margin-right: 5px;
+        }
+        &-3{
+            margin-right: 28px;
+        }
+        &-4{
+            margin-right: 96px;
+        }
+        &-6{
+            justify-content: end;
+            margin-right: 16px;
+        }
+        &-7{
+            margin-right: 44px;
+        }
+        &-8{
+            margin-right: 42px;
+        }
+        &-9{
+            margin-left: auto;
+            margin-right: 43px;
+            
+        }
+        
+    }
+    &-square{
+        border: 1px solid black;
+        @include size(1rem);
+        margin-left: 1.6rem;
+        margin-right: 1.8rem;
+    }
+    &-underline{
+        border-bottom: 1px solid black;
+        width: 104px;
+        &-1,&-2,&-3,&-4{
+            border-bottom: 1px solid black;
+        }
+        &-1{
+            width: 108px;
+            margin-left: 3px;
+        }
+        &-2{
+            width: 150px;
+            margin-left: 5px;
+        }
+        &-3{
+            width: 152px;
+            margin-left: 5px;
+        }
+        &-4{
+            width: 122px;
+            margin-left: 5px;
+        }
+    }
+}
+.declaration{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: $bg-color-3;
+    border: 2px solid $bordor-color-3;
+    &-title{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &-content{
+        font-size: 1rem;
+    }
+    &-line{
+        display: flex;
+        margin-bottom: 10px;
+        text-align: justify;
+        line-height: 1.2;
+        &-item,&-1,&-2{
+            display: flex; 
+            margin-bottom: 10px;
+        }
+        &-1{
+            border-bottom: 1px solid black;
+            width: 100%;
+        }
+        &-item{
+            margin-left: 48px;
+            font-weight: bold;
+            &-1{
+                .declaration-underline{
+                    border-bottom: 1px solid black;
+                    width: 326px;
+                    margin-left: 15rem;
+                }
+            }
+            &-2{
+                margin-left: auto;
+                .declaration-underline{
+                    border-bottom: 1px solid black;
+                    width: 144px;
+                    margin-left: 3rem;
+                }
+            }
+        }
+    }
+    &-square{
+        border: 1px solid black;
+        @include size(1rem);
+        margin-right: 5px;
+    }
+}
+.colDeclaration{
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid $border-color-2;
+    background-color: $bg-color-2;
+    &-title{
+        font-weight: bold;
+        margin-bottom: 5px;        
+    }
+    &-line{
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        text-align: justify;
+        &-1{
+            font-size: 1rem;
+            display: flex;
+        }
+        &-item{
+            display: flex;
+            &-1{
+                display: flex;
+                margin-left: 1.2rem;
+            }
+            &-2{
+                margin-left: auto;
+            }
+        }   
+    }
+    &-underline{
+        border-bottom: 1px solid black;
+        width: 150px;
+        margin-left: 3px;
 
-
+        &-1,&-2{
+            border-bottom: 1px solid black;
+            width: 150px;
+        }
+        &-1{
+            width: 140px;
+            margin-left: 3px;
+        }
+        &-2{
+            width: 144px;
+            margin-left: 3rem;
+        }
+    }
+}
+.laboratory{
+    margin-top: 5px;
+    &-title{
+        display: flex;
+        margin-bottom: 5px;
+        h4{
+            font-weight: bold;
+            margin-right: 5px;
+            
+        }
+        p{
+            font-size: 1rem;
+            margin-top: auto;
+            font-weight: bold;
+        }
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    &-table{
+        text-align: center;
+        tr,th{
+            font-size: 1rem;
+            height: 17px;
+            padding: 3px;
+        }
+        th{
+            font-weight: bold;
+        }
+        td{
+            padding: 3px;
+        }
+    }
+}

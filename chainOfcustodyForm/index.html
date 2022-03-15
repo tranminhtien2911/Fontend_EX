@@ -1,145 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Chain Of Custody Form</title>
-  </head>
-  <body>
-    <div class="header">
-      <img src="image/ml_logo.png" alt="" class="header-left" />
-      <div class="header-center">
-        <h1 class="header-title">CHAIN-OF-CUSTODY FORM</h1>
-        <div class="header-img">
-          <img src="image/RCPA-Logo.png" alt="" class="header-img-R" />
-          <img src="image/nata.png" alt="" class="header-img-N" />
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Chain Of Custody Form</title>
+</head>
+
+<body>
+  <div class="header">
+    <img src="image/ml_logo.png" alt="" class="header-left" />
+    <div class="header-center">
+      <h1 class="header-title">CHAIN-OF-CUSTODY FORM</h1>
+      <div class="header-img">
+        <img src="image/RCPA-Logo.png" alt="" class="header-img-R" />
+        <img src="image/nata.png" alt="" class="header-img-N" />
       </div>
-      <div class="header-end">
-        <div class="header-lab">
-          <span>LAB No. Barcode</span>
-        </div>
-        <p class="header-content">NATA/RCPA Accredited Laboratory</p>
-        <p class="header-content">Number: 14617</p>
-        <p class="header-content-ISO">
-          Accredited for compliance with NPAAC and ISO 15189 Standards
+    </div>
+    <div class="header-end">
+      <div class="header-lab">
+        <span>LAB No. Barcode</span>
+      </div>
+      <p class="header-content">NATA/RCPA Accredited Laboratory</p>
+      <p class="header-content">Number: 14617</p>
+      <p class="header-content-ISO">
+        Accredited for compliance with NPAAC and ISO 15189 Standards
+      </p>
+    </div>
+  </div>
+  <!-- DONOR PART -->
+  <div class="donor">
+    <h3 class="donor-title">DONOR IDENTIFICATION</h3>
+    <div class="donor-content">
+      <div class="donor-content-left">
+        <p class="donor-item">Surname:</p>
+        <p class="donor-item">DOB:</p>
+        <p class="donor-item">Address:</p>
+      </div>
+      <div class="donor-content-right">
+        <p class="donor-item">Given Name:</p>
+        <p class="donor-item">
+          Sex: <span class="donor-item-sex">Male</span> /
+          <span class="donor-item-sex">Female</span>
+          <span class="donor-item-choice">(circle one)</span>
         </p>
       </div>
     </div>
-    <!-- DONOR PART -->
-    <div class="donor">
-      <h3 class="donor-title">DONOR IDENTIFICATION</h3>
-      <div class="donor-content">
-        <div class="donor-content-left">
-          <p class="donor-item">Surname:</p>
-          <p class="donor-item">DOB:</p>
-          <p class="donor-item">Address:</p>
-        </div>
-        <div class="donor-content-right">
-          <p class="donor-item">Given Name:</p>
-          <p class="donor-item">
-            Sex: <span class="donor-item-sex">Male</span> /
-            <span class="donor-item-sex">Female</span>
-            <span class="donor-item-choice">(circle one)</span>
-          </p>
-        </div>
+  </div>
+  <!-- End DONOR PART -->
+  <!-- REQUEST PART -->
+  <div class="request">
+    <h4 class="request-title">REQUESTING AUTHORITY TO COMPLETE</h4>
+    <div class="request-content">
+      <div class="request-content-left">
+        <p>Requesting Docter Details (Name, Address, Provider No)</p>
       </div>
-    </div>
-    <!-- End DONOR PART -->
-    <!-- REQUEST PART -->
-    <div class="request">
-      <h4 class="request-title">REQUESTING AUTHORITY TO COMPLETE</h4>
-      <div class="request-content">
-        <div class="request-content-left">
-          <p>Requesting Docter Details (Name, Address, Provider No)</p>
-        </div>
-        <div class="request-content-right">
-          <p class="request-notes">Diagnosis / Clinical Notes</p>
-          <div class="request-tests">
-            <h5 class="request-tests-title">Test Required</h5>
-            <div class="request-tests-check">
-              <div class="request-tests-item">
-                <div class="request-tests-square"></div>
-                <p class="request-tests-detail">
-                  Urine Drug Screen-perfomed for Cannabinoids, Oplates,
-                  Benzodiazepines, Cocaine & Amphetamines
-                  <span> (AS/NZS 4308:2008)</span>
-                </p>
-              </div>
-              <div class="request-tests-item">
-                <div class="request-tests-square"></div>
-                Other (specify) <span></span>
-              </div>
+      <div class="request-content-right">
+        <p class="request-notes">Diagnosis / Clinical Notes</p>
+        <div class="request-tests">
+          <h5 class="request-tests-title">Test Required</h5>
+          <div class="request-tests-check">
+            <div class="request-tests-item">
+              <div class="request-tests-square"></div>
+              <p class="request-tests-detail">
+                Urine Drug Screen-perfomed for Cannabinoids, Oplates,
+                Benzodiazepines, Cocaine & Amphetamines
+                <span> (AS/NZS 4308:2008)</span>
+              </p>
+            </div>
+            <div class="request-tests-item">
+              <div class="request-tests-square"></div>
+              Other (specify) <span></span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End REQUEST PART -->
-    <!-- Account -->
-    <div class="account">
-      <p>Accout Details</p>
-    </div>
-    <!-- End account -->
+  </div>
+  <!-- End REQUEST PART -->
+  <!-- Account -->
+  <div class="account">
+    <p>Accout Details</p>
+  </div>
+  <!-- End account -->
 
-    <!-- Collector -->
-    <div class="collector">
-      <span class="collector-title">COLLECTTOR TO COMPLETE</span>
-      <div class="collector-photo">
-        <span class="collector-photo-title">Photo ID Check</span>
-        <div class="collector-photo-content">
-          <div class="collector-photo-left">
-            <div class="collector-photo-left-top">
-              <span class="collector-photo-item"
-                >  <div class="collector-photo-square"></div>  Driver's Lincense No.
-                <div class="collector-photo-underline"></div>
-              </span>
-
-              <span class="collector-photo-item1"
-                > <div class="collector-photo-square"></div>Passport No.
-                <div class="collector-photo-underline"></div>
+  <!-- Collector -->
+  <div class="collector">
+    <h2 class="collector-title">COLLECTOR TO COMPLETE</h2>
+    <div class="photo">
+      <div class="photo-title">Photo ID Check</div>
+      <div class="photo-content">
+        <div class="photo-left">
+          <div class="photo-top">
+            <div class="photo-item">
+              <div class="photo-square"></div>
+              <span>
+                Driver's Lincense No.
+                <div class="photo-underline"></div>
               </span>
             </div>
-            <div class="collector-photo-left-bottom">
-              <span class="collector-photo-item2"
-                > <div class="collector-photo-square"></div>Other(specify)
-                <div class="collector-photo-underline"></div
-              ></span>
+            <div class="photo-item">
+              <div class="photo-square"></div>
+              <span>
+                Passport No.
+                <div class="photo-underline-1"></div>
+              </span>
             </div>
           </div>
-          <div class="collector-photo-right">
-            <span> <div class="collector-photo-square"></div>Company ID(Phto ID)</span>
+          <div class="photo-bt">
+            <div class="photo-item">
+              <div class="photo-square"></div>
+              <span>
+                Other(specify)
+                <div class="photo-underline-2"></div>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="collector-specimen">
-        <span class="collector-specimen-title">SPECIMEN TYPE</span>
-        <div class="collector-specimen-content">
-          <div class="collector-specimen-content-line1">
-            Urine Appearance Urine Speciman Temperatue (Must be read within 4
-            minutes)
-          </div>
-          <div class="collector-specimen-content-line2">
-            On-site Creatinine Dipstick value: Normal Ranga >= 20 mg/dl Lot No.:
-          </div>
-          <div class="collector-specimen-content-line3">Exp, Date:</div>
-          <div class="collector-specimen-content-line4">
-            Collection Type Observed Un-observed Other specimen (specify)
-          </div>
-          <div class="collector-specimen-content-line5">
-            Collection Cantre: Coll Date: Coll Time:
-          </div>
-          <div class="collector-specimen-content-line6">
-            No. of specimens / tubes sent to laboratory: Duplicate Samples
-            Collected:
+        <div class="photo-right">
+          <div class="photo-item">
+            <div class="photo-square"></div>
+            <span> Company ID (Photo ID) </span>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Collector -->
+    <div class="specimen">
+      <h3 class="specimen-title">SPECIMEN TYPE</h3>
+      <div class="specimen-content">
+        <div class="specimen-line">
+          <div class="specimen-line-item">
+            <span>Urine</span>
+            <div class="specimen-square"></div>
+          </div>
+          <div class="specimen-line-item-1">
+            <span>Appearance:</span>
+            <div class="specimen-underline"></div>
+          </div>
+          <div class="specimen-line-item-2">
+            <span> Urine Speciman Temperatue:</span>
+            <div class="specimen-underline"></div>
+          </div>
+          <div class="specimen-line-item">
+            <span> (Must be read within 4 minutes)</span>
+          </div>
+        </div>
+        <div class="specimen-line">
+          <div class="specimen-line-item-3">
+            <span>On-site Creatinine Dipstick value:</span>
+            <div class="specimen-underline-1"></div>
+          </div>
+          <div class="specimen-line-item-4">
+            <span>Normal Ranga >= 20 mg/dl</span>
+          </div>
+          <div class="specimen-line-item-5">
+            <span>Lot No.:</span>
+            <div class="specimen-underline-2"></div>
+          </div>
 
-  </body>
+        </div>
+        <div class="specimen-line-1">
+          <div class="specimen-line-item-6">
+            <span> Exp, Date:</span>
+            <div class="specimen-underline-2"></div>
+          </div>
+        </div>
+        <div class="specimen-line">
+          <div class="specimen-line-item-7">
+            <span>Collection Type</span>
+          </div>
+          <div class="specimen-line-item-7">
+            <div class="specimen-square"></div> <span>Observed</span>
+          </div>
+          <div class="specimen-line-item-7">
+            <div class="specimen-square"></div> <span>Un-observed</span>
+          </div>
+          <div class="specimen-line-item">
+            <div class="specimen-square"></div> <span>Other specimen (specify)</span>
+            <div class="specimen-underline-2"></div>
+          </div>
+        </div>
+        <div class="specimen-line">
+          <div class="specimen-line-item-8">
+            <span>Collection Cantre:</span>
+            <div class="specimen-underline-3"></div>
+          </div>
+          <div class="specimen-line-item-8">
+            <span>Coll Date:</span>
+            <div class="specimen-underline-3"></div>
+          </div>
+          <div class="specimen-line-item">
+            <span>Coll Time:</span>
+            <div class="specimen-underline-3"></div>
+          </div>
+
+
+        </div>
+        <div class="specimen-line">
+          <div class="specimen-line-item">
+            <span>No. of specimens / tubes sent to laboratory: </span>
+            <div class="specimen-underline-4"></div>
+          </div>
+          <div class="specimen-line-item-9">
+            <span>Duplicate Samples Collected: </span><span>Y/N</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End Collector -->
+  <!-- DONOR DECLARATION -->
+  <div class="declaration">
+    <div class="declaration-title">
+      <h3>DONOR DECLARATION</h3>
+    </div>
+    <div class="declaration-content">
+      <div class="declaration-line">
+        I certify that the specimen accompanying this form is my own and was
+        provided by me to the authorized collector. I also certify that specimen
+        containers were seated with lancer evident seals in my presence and that the
+        information provided on this form and on the labels is correct. I also consent
+        to the analysis of the specimen as per the request form and the release of these
+        results to my employer / protective employer / doctor or their authorized representative.
+      </div>
+      <div class="declaration-line">
+        <p><span style="font-weight: bold;">MEDICATIONS</span>: Please list any prescription or non-prescription
+          medication or other agents taken in the last month <span style="font-style: italic;">(Please print)</span></p>
+        <div class="declaration-line-item">
+          <div class="declaration-square"></div>
+          <span>Nil Declared </span>
+        </div>
+      </div>
+      <div class="declaration-line-1"></div>
+      <div class="declaration-line-2">
+        <div class="declaration-line-item-1">
+          <span>Signature of Doctor / Guardian: </span>
+          <div class="declaration-underline"></div>
+        </div>
+        <div class="declaration-line-item-2">
+          <span>Date: </span>
+          <div class="declaration-underline"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END DONOR DECLARATION -->
+  <!-- COLLECTOR DECLARATION -->
+  <div class="colDeclaration">
+    <div class="colDeclaration-title">
+      <h3>COLLECTOR DECLARATION</h3>
+    </div>
+    <div class="colDeclaration-line">
+      I certify the donor signature and the specimen(s)
+      identified on this form was provided to me by the donor
+      (whose certification appears above), and bears the same
+      identification as documented above. It has been collected,
+      divided, labeled and sealed in accordance with Medilab Pathology
+      procedures, as per AS/NZS 4308:2008.
+    </div>
+    <div class="colDeclaration-line-1">
+      <div class="colDeclaration-line-item">
+        <span>Signature of Doctor:</span>
+        <div class="colDeclaration-underline"></div>
+      </div>
+      <div class="colDeclaration-line-item-1">
+        <span>Collector Name (Print):</span>
+        <div class="colDeclaration-underline-1"></div>
+      </div>
+      <div class="colDeclaration-line-item-2">
+        <span>Date: </span>
+        <div class="colDeclaration-underline-2"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End COLLECTOR DECLARATION -->
+  <!-- LABORATORY -->
+  <div class="laboratory">
+    <div class="laboratory-title">
+      <h4>LABORATORY USE ONLY</h4>
+      <p style="font-style: italic;">(Chain-of-custody to be completed by all who handle the specimen)</p>
+    </div>
+
+    <table class="laboratory-table" width="100%">
+      <tr>
+        <th>Recived by (Print)</th>
+        <th>Signature</th>
+        <th>Date / Time Recived</th>
+        <th>Seal Intact</th>
+        <th>Lables Match</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>YES / NO</td>
+        <td>YES / NO</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>YES / NO</td>
+        <td>YES / NO</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>YES / NO</td>
+        <td>YES / NO</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>YES / NO</td>
+        <td>YES / NO</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>YES / NO</td>
+        <td>YES / NO</td>
+      </tr>
+
+    </table>
+  </div>
+  <!-- End LABORATORY -->
+</body>
+
 </html>
