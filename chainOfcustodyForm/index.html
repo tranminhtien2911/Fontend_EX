@@ -5,19 +5,520 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="reset.css" /> -->
+  <!-- <link rel="stylesheet" href="style.css" /> -->
   <title>Chain Of Custody Form</title>
 </head>
+<style>
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  padding: 5px;
+  width: 21cm;
+  height: 29.7cm;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 30% 46% 24%;
+  margin-bottom: 2px;
+}
+.header-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.header-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+.header-img-R {
+  width: 14rem;
+  height: 4.5rem;
+  bottom: 3px;
+  right: 0;
+  margin-right: 5px;
+  margin-bottom: 1.8rem;
+}
+.header-img-N {
+  width: 6rem;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+}
+.header-lab {
+  text-align: center;
+  border: 2px black solid;
+  width: 100%;
+  height: 6rem;
+  padding-top: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.header-lab span {
+  font-size: 1.3rem;
+}
+.header-content {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.header-content-ISO {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.donor {
+  width: 100%;
+  height: 12rem;
+  border: 2px solid #111e52;
+  background-color: #ebeaef;
+  padding: 5px;
+}
+.donor-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.donor-title {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.donor-item {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.donor-item-sex {
+  margin: 0 1rem 0 1rem;
+}
+.donor-item-choice {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.request {
+  margin-top: 5px;
+}
+.request-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.request-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3px;
+}
+.request-content-left {
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: bold;
+}
+.request-notes {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 5px;
+  height: 4rem;
+}
+.request-tests {
+  border-top: 2px solid #111e52;
+  padding: 5px;
+  line-height: 1.4;
+}
+.request-tests-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.request-tests-item {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 5% 95%;
+  margin-top: 3px;
+}
+.request-tests-item span {
+  font-weight: bold;
+  font-style: italic;
+}
+.request-tests-item-1 {
+  display: grid;
+  grid-template-columns: 5% 18% 82%;
+  margin-top: 3px;
+  font-size: 1rem;
+}
+.request-tests-square {
+  width: 1rem;
+  height: 1rem;
+  border: 1px black solid;
+}
+.request-tests-underline {
+  border-bottom: 1px solid black;
+  width: 282px;
+}
+.request-content-left, .request-content-right {
+  border: 2px solid #111e52;
+  background-color: #ebeaef;
+}
+
+.account {
+  margin-top: 5px;
+  width: 100%;
+  height: 38px;
+  background-color: #ebeaef;
+  border: 2px solid #111e52;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.collector {
+  margin-top: 5px;
+}
+.collector-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.photo {
+  border: 2px solid #cd7d8a;
+  background-color: #ffeeea;
+  height: 80px;
+  width: 100%;
+  padding: 5px;
+}
+.photo-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.photo-content {
+  display: flex;
+  font-size: 1.2rem;
+}
+.photo-top {
+  display: flex;
+  margin-bottom: 1.7rem;
+}
+.photo-item {
+  display: flex;
+  margin-right: 30px;
+}
+.photo-square {
+  border: 1px solid black;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 5px;
+}
+.photo-underline {
+  border-bottom: 1px solid black;
+  width: 135px;
+  margin-left: 120px;
+}
+.photo-underline-1, .photo-underline-2 {
+  border-bottom: 1px solid black;
+}
+.photo-underline-1 {
+  width: 135px;
+  margin-left: 75px;
+}
+.photo-underline-2 {
+  width: 432px;
+  margin-left: 80px;
+}
+
+.specimen {
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid #cd7d8a;
+  background-color: #ffeeea;
+}
+.specimen-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.specimen-content {
+  font-size: 1.2rem;
+}
+.specimen-line {
+  display: flex;
+  margin-bottom: 5px;
+}
+.specimen-line-1 {
+  margin-bottom: 5px;
+}
+.specimen-line-item {
+  display: flex;
+}
+.specimen-line-item-1, .specimen-line-item-2, .specimen-line-item-3, .specimen-line-item-5, .specimen-line-item-6, .specimen-line-item-7, .specimen-line-item-8 {
+  display: flex;
+}
+.specimen-line-item-1, .specimen-line-item-2 {
+  margin-right: 5px;
+}
+.specimen-line-item-3 {
+  margin-right: 28px;
+}
+.specimen-line-item-4 {
+  margin-right: 96px;
+}
+.specimen-line-item-6 {
+  justify-content: end;
+  margin-right: 16px;
+}
+.specimen-line-item-7 {
+  margin-right: 44px;
+}
+.specimen-line-item-8 {
+  margin-right: 42px;
+}
+.specimen-line-item-9 {
+  margin-left: auto;
+  margin-right: 43px;
+}
+.specimen-square {
+  border: 1px solid black;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1.6rem;
+  margin-right: 1.8rem;
+}
+.specimen-underline {
+  border-bottom: 1px solid black;
+  width: 104px;
+}
+.specimen-underline-1, .specimen-underline-2, .specimen-underline-3, .specimen-underline-4 {
+  border-bottom: 1px solid black;
+}
+.specimen-underline-1 {
+  width: 108px;
+  margin-left: 3px;
+}
+.specimen-underline-2 {
+  width: 150px;
+  margin-left: 5px;
+}
+.specimen-underline-3 {
+  width: 152px;
+  margin-left: 5px;
+}
+.specimen-underline-4 {
+  width: 122px;
+  margin-left: 5px;
+}
+
+.declaration {
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #fefce5;
+  border: 2px solid #feed85;
+}
+.declaration-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.declaration-content {
+  font-size: 1rem;
+}
+.declaration-line {
+  display: flex;
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 1.2;
+}
+.declaration-line-item, .declaration-line-1, .declaration-line-2 {
+  display: flex;
+  margin-bottom: 10px;
+}
+.declaration-line-1 {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.declaration-line-item {
+  margin-left: 48px;
+  font-weight: bold;
+}
+.declaration-line-item-1 .declaration-underline {
+  border-bottom: 1px solid black;
+  width: 326px;
+  margin-left: 15rem;
+}
+.declaration-line-item-2 {
+  margin-left: auto;
+}
+.declaration-line-item-2 .declaration-underline {
+  border-bottom: 1px solid black;
+  width: 144px;
+  margin-left: 3rem;
+}
+.declaration-square {
+  border: 1px solid black;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 5px;
+}
+
+.colDeclaration {
+  margin-top: 5px;
+  padding: 5px;
+  border: 2px solid #cd7d8a;
+  background-color: #ffeeea;
+}
+.colDeclaration-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.colDeclaration-line {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.colDeclaration-line-1 {
+  font-size: 1rem;
+  display: flex;
+}
+.colDeclaration-line-item {
+  display: flex;
+}
+.colDeclaration-line-item-1 {
+  display: flex;
+  margin-left: 1.2rem;
+}
+.colDeclaration-line-item-2 {
+  margin-left: auto;
+}
+.colDeclaration-underline {
+  border-bottom: 1px solid black;
+  width: 150px;
+  margin-left: 3px;
+}
+.colDeclaration-underline-1, .colDeclaration-underline-2 {
+  border-bottom: 1px solid black;
+  width: 150px;
+}
+.colDeclaration-underline-1 {
+  width: 140px;
+  margin-left: 3px;
+}
+.colDeclaration-underline-2 {
+  width: 144px;
+  margin-left: 3rem;
+}
+
+.laboratory {
+  margin-top: 5px;
+}
+.laboratory-title {
+  display: flex;
+  margin-bottom: 5px;
+}
+.laboratory-title h4 {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.laboratory-title p {
+  font-size: 1rem;
+  margin-top: auto;
+  font-weight: bold;
+}
+.laboratory table,
+.laboratory th,
+.laboratory td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.laboratory-table {
+  text-align: center;
+}
+.laboratory-table tr,
+.laboratory-table th {
+  font-size: 1rem;
+  height: 17px;
+  padding: 3px;
+}
+.laboratory-table th {
+  font-weight: bold;
+}
+.laboratory-table td {
+  padding: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+</style>
 <body>
   <div class="header">
-    <img src="image/ml_logo.png" alt="" class="header-left" />
+    <img src="https://firebasestorage.googleapis.com/v0/b/sa-test-1-discovery.appspot.com/o/web_collector_management%2Fml_logo.png?alt=media&token=709faa07-57cd-4c82-8c0e-2a68af343b6c" alt="" class="header-left" />
     <div class="header-center">
       <h1 class="header-title">CHAIN-OF-CUSTODY FORM</h1>
       <div class="header-img">
-        <img src="image/RCPA-Logo.png" alt="" class="header-img-R" />
-        <img src="image/nata.png" alt="" class="header-img-N" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/sa-test-1-discovery.appspot.com/o/web_collector_management%2FRCPA-Logo.png?alt=media&token=e25765f5-5eeb-44a6-a3a8-3fe416203a99" alt="" class="header-img-R" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/sa-test-1-discovery.appspot.com/o/web_collector_management%2Fnata.png?alt=media&token=9334fc4b-256d-4947-849c-60e908d2de53" alt="" class="header-img-N" />
       </div>
     </div>
     <div class="header-end">
@@ -71,9 +572,9 @@
                 <span> (AS/NZS 4308:2008)</span>
               </p>
             </div>
-            <div class="request-tests-item">
+            <div class="request-tests-item-1">
               <div class="request-tests-square"></div>
-              Other (specify) <span></span>
+               <span>Other (specify)</span><div class="request-tests-underline"></div>
             </div>
           </div>
         </div>

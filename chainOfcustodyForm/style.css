@@ -140,14 +140,24 @@ img {
   grid-template-columns: 5% 95%;
   margin-top: 3px;
 }
+.request-tests-item span {
+  font-weight: bold;
+  font-style: italic;
+}
+.request-tests-item-1 {
+  display: grid;
+  grid-template-columns: 5% 18% 82%;
+  margin-top: 3px;
+  font-size: 1rem;
+}
 .request-tests-square {
   width: 1rem;
   height: 1rem;
   border: 1px black solid;
 }
-.request span {
-  font-weight: bold;
-  font-style: italic;
+.request-tests-underline {
+  border-bottom: 1px solid black;
+  width: 282px;
 }
 .request-content-left, .request-content-right {
   border: 2px solid #111e52;
@@ -414,14 +424,17 @@ img {
   margin-top: auto;
   font-weight: bold;
 }
-.laboratory table, .laboratory th, .laboratory td {
+.laboratory table,
+.laboratory th,
+.laboratory td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 .laboratory-table {
   text-align: center;
 }
-.laboratory-table tr, .laboratory-table th {
+.laboratory-table tr,
+.laboratory-table th {
   font-size: 1rem;
   height: 17px;
   padding: 3px;
