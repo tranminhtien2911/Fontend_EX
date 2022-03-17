@@ -1,0 +1,270 @@
+$blue-color: #42a7fe;
+$green-color: #00c899;
+$primary: #FC556F;
+$secondary: #FD9C84;
+$gradient: linear-gradient(to right, $primary, $secondary);
+$text-color: #291667;
+
+html {
+    font-size: 62.5%;
+
+}
+
+* {
+    box-sizing: border-box;
+
+
+
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    background-color: #fbfbfd;
+    padding: 5rem;
+    min-height: 100vh;
+
+}
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flexBox($align: flex-start, $justify: flex-start, $flex-direction: row, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.signup {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f7ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(black, 0.1);
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &-content,
+    &-image {
+        width: calc(50% - 4rem);
+    }
+
+    &-heading {
+        font-weight: bold;
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+        color: $text-color;
+    }
+
+    &-caption {
+        color: $primary;
+        font-weight: bold;
+        margin-bottom: 4.5rem;
+        position: relative;
+        padding-left: 12rem;
+
+        &:before {
+            content: "";
+            width: 10rem;
+            height: 2px;
+            background-color: $primary;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -1px;
+        }
+    }
+
+    &-social {
+        @include flexBox(stretch, space-between);
+        margin-bottom: 6rem;
+        &-item{
+            padding: 1.5rem 2.5rem;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            cursor: pointer;
+            @include flexBox(center,center);
+            color: $text-color;
+            width: calc(50% - 1.5rem);
+            
+        }
+        &-icon{
+            margin-right: 2rem;
+        }
+        &-text{
+            font-size: 1.3rem;
+        }
+    }
+    &-form{
+        &-label{
+            color: $text-color;
+            display: inline-block;
+            margin-bottom: 1rem;
+            transform: translateX(1rem);
+            cursor: pointer;
+        }
+        &-input{
+            padding: 1.5rem 2rem;
+            border: 1px solid #eee;
+            background-color: #fafbff;
+            border-radius: 10px;
+            display: block;
+            outline: none;
+            width: 100%;
+            transition: all 0.25s linear;
+            &:focus{
+                background-color: white;
+                border-color: $primary;
+                & + .signup-form-check{
+                    background-color: $primary;
+                    color: white;
+                    // transition: all 0.25s linear;
+                }
+            }
+        }
+        &-row{
+            @include flexBox(stretch, space-between);
+            margin-bottom: 3rem;
+            .signup-form-group{
+                width: calc(50% - 1.5rem);
+            }
+        }
+        &-term{
+        
+            input {
+                display: none;
+                &:checked + label:before{
+                    border-color: $primary;
+                    background-color: $primary;
+                }
+            }
+            label {
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 3rem;
+                padding-left: 3.5rem;
+                margin-bottom: 5rem;
+                &:before{
+                    content : "";
+                    @include size(2.5rem);
+                    border-radius: 8px;
+                    background-color: #eee;
+                    position:absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border: 1px solid #eee;
+                    transition: all 0.25s linear;
+
+                }
+            }
+        }
+        &-submit{
+            @include size(8rem);
+            color: white;
+            border: 0;
+            border-radius: 2rem;
+            background-color: $primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-bottom: 65px;
+            box-shadow: 0 10px 10px 0px rgba($primary, 0.5);
+
+        }
+        &-validate{
+            position: relative;
+            .signup-form-input{
+                padding-right: 6rem;
+            }
+
+        }
+        &-check{
+            @include size(3rem);
+            border-radius: 10px;
+            background-color: #eee;
+            color: $text-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.25s linear;
+        }
+    }
+    &-already{
+        color: $text-color;
+        a{
+            color: $primary;
+        }
+    }
+}
+@media  screen and (max-width: 1439px) {
+    .signup{
+        &-content{
+            width: calc(60% - 2rem);
+        }
+        &-image{
+            width: calc(40% - 2rem);
+        }
+    }
+}
+@media screen and (max-width: 1279px){
+    .signup{
+        &-content{
+            width: 100%;
+        }
+        &-image{
+            display: none;
+        }
+    }
+} 
+@media screen and (max-width: 1279px){
+    body{
+        padding: 2rem;
+    }
+    .signup{
+        padding: 2rem;
+        &-social{
+            flex-direction: column;
+            &-item{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+        &-form{
+            &-row{
+                flex-direction: column;
+                margin-bottom: 0;
+                .signup-form-group{
+                    width: 100%;
+                }
+            }
+            &-group{
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+} 
