@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  padding: 2rem;
+  width: 21cm;
+  height: 29.7cm;
+  margin: auto;
+  border: 1px red solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+/*# sourceMappingURL=test.css.map */
