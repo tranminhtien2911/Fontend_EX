@@ -23,46 +23,73 @@ img {
   max-width: 100%;
 }
 
-.checkbox-input {
+.toggle-input {
   display: none;
 }
-.checkbox-input:checked + .checkbox-label:after {
-  opacity: 1;
-  visibility: visible;
+.toggle-input:checked + .toggle-label {
+  background-color: #7f6cfa;
 }
-.checkbox-label {
-  position: relative;
-  padding-left: 5rem;
+.toggle-input:checked + .toggle-label .toggle-spin {
+  transform: translateX(5rem);
+}
+.toggle-label {
+  display: inline-block;
+  width: 10rem;
+  height: 5rem;
+  background-color: #ccc;
+  border-radius: 5rem;
   cursor: pointer;
+  padding: 5px;
 }
-.checkbox-label:before {
-  content: "";
+.toggle-spin {
   width: 4rem;
   height: 4rem;
-  background-color: #FC556F;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 1rem;
-}
-.checkbox-label:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 1rem;
-  width: 2rem;
-  height: 1rem;
-  transform: rotate(-45deg);
-  border-left: 3px solid white;
-  border-bottom: 3px solid white;
-  visibility: hidden;
-  transform: 0.25s;
+  background-color: white;
+  border-radius: 4rem;
+  transition: 0.25s linear;
 }
 
-.radio {
-  margin: 3rem;
-  display: inline-block;
+.input-style {
+  margin-top: 20px;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #b7c1cb;
+  width: 100%;
+  color: #0e1e35;
+  font-size: 1.6rem;
+  outline: none;
+  transition: all 0.25s linear;
+}
+.input-style::-webkit-input-placeholder {
+  color: #b7c1cb;
+}
+.input-style:focus {
+  border-color: #ff695a;
+  box-shadow: 0 0 0 4px #ffe1de;
+}
+
+.button-style {
+  margin-top: 20px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: #fd607d;
+  transition: all 0.25s linear;
+  box-shadow: 0 5px 0 0 #93263a;
+}
+.button-style:hover {
+  background-color: #ffe1de;
+  color: #fd607d;
+}
+.button-style:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0 #93263a;
 }
 
 /*# sourceMappingURL=form.css.map */
