@@ -27,13 +27,15 @@
  * Bài 2:
  * Cho 2 số a và b, tìm ra số lớn hơn
  */
-const a =  10;
-const b = 5;
+// const a =  10;
+// const b = 5;
 
-if(a>b){
-    alert(`số lớn hơn là số ${a}`);
-}else if(a<b){
-    alert(`Số lớn hơn là số ${b}`);
-}else{
-    alert('Không có số nào lớn hơn số nào cả')
-}
+// if(a>b){
+//     alert(`số lớn hơn là số ${a}`);
+// }else if(a<b){
+//     alert(`Số lớn hơn là số ${b}`);
+// }else{
+//     alert('Không có số nào lớn hơn số nào cả')
+// }
+
+
