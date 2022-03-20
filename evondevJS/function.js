@@ -74,7 +74,16 @@ function capitalize (word = ""){
 // console.log(capitalize("NAM"))
 
 /**
- * 
+ * Bài 3:
+ * Viết hàm có sử dụng callback (function là parameter của function khác) in ra kết quả của hàm compare đã viết ở trên.
  */
+function useCallback( a, b, callback){
+    let max = compare(a , b);
+    callback(max);
+}
 
+function prinMax(number){
+    console.log("Max number is " + number);
+}
 
+console.log(useCallback(500, 1000, prinMax));
