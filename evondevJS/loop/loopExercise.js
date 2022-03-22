@@ -63,8 +63,52 @@ function reverseNumber(number) {
  * 
  */
 
-function fizzBuzz(number){
-    if(number%2 == 0  && number%3 == 0 ){
-        console.log()
+function fizzBuzz(number) {
+    for (let i = 1; i <= number; i++) {
+        if (i % 2 === 0 && i % 3 === 0) {
+            console.log("FizzBuzz");
+        }else if (i % 2 === 0) {
+            console.log("Fizz");
+        }else if (i % 3 === 0) {
+            console.log("Buzz");
+        }
     }
 }
+
+// fizzBuzz(15);
+
+/**
+ * Bài 6: Cho 1 mảng các giá trị số [1,2,3,1,1,1,2,2,2,5,5,5,7,7,6].
+ * Viết một function trả vè một mảng với các giá trị unique. Kết quả ở trên sẽ là [1,2,3,5,7,6]
+ */
+
+function unique(arr){
+    let result = [];
+    if(!Array.isArray(arr)) return result;
+    for(let i = 0; i < arr.length ; i++){
+        if(!result.includes(arr[i])){
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+
+// console.log(unique([1,2,3,1,1,1,2,2,2,5,5,5,7,7,6]));
+
+/**
+ * Bài 7: Viết 1 function xử lý từ 1 mảng lớn thành nhiều mảng con dựa vào một số nguyên đầu vào.
+ * Ví dụ ([1,2,3,4,5], 2) -> [[1,2], [3,4], [5]]
+ * ([1,2,3,4,5,6], 3) -> [[1,2,3],[4,5,6]]
+ */
+
+function splitArray(array, number){
+    let result = [];
+    let index = 0;
+    while(index < array.length){
+        result.push(array.slice(index, number + index));
+        index += number;
+
+    }
+    return result;
+}
+console.log(splitArray([1,2,3,4,5,6],3));
