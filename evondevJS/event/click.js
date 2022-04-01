@@ -52,12 +52,19 @@ let link = document.querySelector(".link");
 link.addEventListener("click", function(event){
     event.preventDefault();
     // console.log("click me");
-    // selector.style
-    // event.target.style
+    // selector.style.property = value
+    // event.target.style.property = value
 
-    console.log(event.target);
-    console.log(event.target.style);
-    // backgrounf
+    // console.log(event.target);
+    // console.log(event.target.style);
+    // event.target.style.color = "red";
+    // background-color -> backgroundColor
+    // position -> position
+
+    // Lấy custom attribute data-abc
+    // event.target.dataset.abc
+    let name = event.target.dataset.name;
+    console.log(name);
 })
 
 
