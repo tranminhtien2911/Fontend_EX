@@ -1,0 +1,218 @@
+$brand: #DF2040;
+$primary-1: #FC556F;
+$primary-2: #1A71CA;
+$primary-3: #FBAB5B;
+$secondary-1: #7B7986;
+$secondary-2: #FEE5CD;
+$secondary-3: #F9D2D9;
+$secondary-4: #D9F2E1;
+$secondary-5: #D6F0F5;
+$secondary-6: #22438C;
+$palette-1: #1D262B;
+$palette-2: #051113;
+$palette-3: #C2CFD6;
+$palette-4: #E0E7EB;
+$palette-5: #F6F8F9;
+$palette-6: #F9FBFE;
+$font-main: "Darker Grotesque",
+sans-serif;
+// $font-logo: ;
+
+// $gradient: linear-gradient(to right, $primary, $secondary);
+@font-face {
+    font-family: aquire;
+    src: url("assets/AquireBold-8Ma60.otf");
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+    outline: none;
+}
+
+input {
+    line-height: normal;
+}
+
+label,
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* using rem unit */
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+#header {
+    padding: 0px;
+    background-color: $palette-6;
+
+    &-wrap {
+        padding: 0 44px;
+        margin-top: 40px;
+        height: 6rem;
+    }
+
+    &-logo {
+        margin-right: 4.8rem;
+
+        img {
+            width: 288px;
+            height: 6rem;
+        }
+    }
+}
+
+.header {
+    &-list {
+        padding-top: 0.8rem;
+        padding-left: 50px;
+    }
+
+    &-item {
+        font-family: $font-main;
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin-right: 4.8rem;
+
+        a {
+            color: $palette-1;
+        }
+    }
+
+    &-item:first-child {
+        font-weight: bold;
+    }
+
+    &-login {
+        width: 164px;
+        height: 48px;
+        border: 1px solid $primary-2;
+        border-radius: 8px;
+        color: $primary-2;
+        font-size: 20px;
+        font-family: $font-main;
+        background-color: unset;
+        font-weight: 600;
+
+        i {
+            color: $secondary-6;
+            margin-right: 8px;
+        }
+    }
+}
+
+.LDPage {
+    padding: 0 44px;
+    background-color: $palette-6;
+    &-1 {
+        &-left {}
+
+        &-right {
+            img {
+                width: 844px;
+                height: 655px;
+            }
+        }
+        &-wrap {
+            transform: translateX(10%) translateY(50%);
+            margin: auto;
+        }
+
+        &-title {
+            font-size: 48px;
+            font-family: $font-main;
+            color: $secondary-6;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        &-name {
+            font-family: aquire;
+            font-size: 56px;
+            color: $primary-2;
+        }
+
+        &-text {
+            font-family: $font-main;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 48px;
+            width: 484px;
+            height: 72px;
+        }
+        &-btn {
+            margin-top: 32px;
+            &-detail,
+            &-comein {
+                width: 204px;
+                height: 48px;
+                border-radius: 6px;
+                border: none;
+                box-shadow: 0px 2px 6px 0px #045ebf41;
+            }
+            &-detail {
+                background-color: $palette-5;
+                font-family: $font-main;
+                font-size: 24px;
+                font-weight: bold;
+                color: $primary-2;
+                margin-right: 48px;
+            }
+
+            &-comein {
+                background-color: $primary-3;
+                font-family: $font-main;
+                font-size: 24px;
+                font-weight: bold;
+                color: $palette-6;
+            }
+        }
+    }
+}
